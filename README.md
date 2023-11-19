@@ -295,6 +295,10 @@ or to create a menu item to start the file
 /home/myusername/scripts/yad-loki.sh
 ```
 
+I did not create any way to control the Loki's fan, as I never really noticed it much, and when I did, I tweaked the games a bit so it wasn't really audible. The options are still there though from the ayn-platform drivers, but YMMV.  
+
+I also did not feel the need to be able to adjust the TDP of the system, as the system seems to do just fine on its own controlling it. It can be controlled via Ryzenadj, but that is an entirely different beast.  
+
 #### The Games:
 
 Okay, but how are we going to game on this if there is no multiarch, Wine, Steam, Bottles, or Lutris, you might ask?
