@@ -10,7 +10,7 @@ So why not just use the distro's ([ChimeraOS](https://chimeraos.org/), [Batocera
 
 First off, you will need to get a few things to make this transition possible.
 
-Hardware Required to Install Linux:
+Hardware Required to Install Linux:  
     USB-C HUB - [Here is a link](https://www.amazon.com/dp/B08MZZVFX6/) to the one I bought and used.  
     4GB+ Thumb Drive  
     USB Keyboard  
