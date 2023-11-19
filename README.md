@@ -1,5 +1,7 @@
 # Linux on a Loki Mini Pro
 
+![Screenshot](VoidLoki.jpg)
+
 This is a fairly straight forward guide on how I got Void Linux working* on a Loki Mini Pro (Now discontinued by AYN). (This may work for all the Loki variants, YMMV) As well as some custom scripts, and tweaks I made to make the Linux gaming experience better on my Loki Mini Pro.
 
 There is a caviot * to this at the moment though, currently there is no working audio from the built in speakers of any variant of the Loki. There are people working on the Kernel drivers, but as of writing this it is still a work in progress. However, the headphone jack and bluetooth work just fine to deliver audio.
