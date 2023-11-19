@@ -1,4 +1,5 @@
 #!/bin/bash
+# by TExtubation
 
 #landscape (left)
 export DISPLAY=":0"
