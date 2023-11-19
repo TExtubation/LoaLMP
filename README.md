@@ -361,6 +361,13 @@ x11vnc -scale 5/8 -noxdamage -repeat -forever
 
 And connect to your Loki thru vnc on an another pc.
 
+If upon starting Void for the first time you find that you do not have wifi run the following
+
+```
+sudo ln -S /etc/sv/NetworkManager /var/services/
+```
+This will start the NetworkManager service and you should have wifi.  
+
 #### The End:
 
 Well here it is. You made it. I would love to hear your tips and tricks if you find any, and as I learn more I'll post it here. I hope this helps others.
