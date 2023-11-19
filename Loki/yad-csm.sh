@@ -1,5 +1,5 @@
 #!/bin/bash
-# https://yad-guide.ingk.se/
+# by TExtubation
 #
 
 # have script pull its own location and check for csm.conf
