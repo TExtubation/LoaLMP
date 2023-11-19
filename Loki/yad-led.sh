@@ -1,5 +1,5 @@
 #!/bin/bash
-# https://yad-guide.ingk.se/
+# by TExtubation
 #
 # script determins its own location
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
