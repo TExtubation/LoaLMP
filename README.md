@@ -11,10 +11,10 @@ So why not just use the distro's ([ChimeraOS](https://chimeraos.org/), [Batocera
 First off, you will need to get a few things to make this transition possible.
 
 Hardware Required to Install Linux:
-    USB-C HUB - [Here is a link](https://www.amazon.com/dp/B08MZZVFX6/) to the one I bought and used.
-    4GB+ Thumb Drive
-    USB Keyboard
-    USB Mouse
+    USB-C HUB - [Here is a link](https://www.amazon.com/dp/B08MZZVFX6/) to the one I bought and used.  
+    4GB+ Thumb Drive  
+    USB Keyboard  
+    USB Mouse  
 
 If you plan on backing up the pre-installed Windows 10 system on the Loki you will also need an external hard drive big enough to hold the backup image. I recommend using [Clonezilla](https://clonezilla.org/) to create the backup image as it is fairly simple to use, plus it is free, and there are tons of guides online on how to use it. If you were so inclined, you could also just get another ssd and swap it out so you always have the Windows install if you wanted.
 
@@ -26,8 +26,8 @@ This is the point at which if you wanted to save an image of the Windows install
 
 Before you can install, whichever Linux flavor you have chosen, you must disable TPM in the bios. To do this you have to hook up the usb-c hub so you can connect the thumb drive that has the Linux installer and the usb keyboard. As soon as you turn on the Loki hold down the two lower buttons on either side of  the screen. Holding them down together will get you into the bios. From here you must use the usb keyboard to navigate thru the menu's to disable TPM. You should also select the boot order so the removable drive is able to boot first. Remember to save before exiting.
 
-Follow your instructions for install according to whichever flavor you chose.
-I am going to say something now that may make some people upset, so here goes. 
+Follow your instructions for install according to whichever flavor you chose.  
+I am going to say something now that may make some people upset, so here goes.  
 
 *There really is no need to do any kind of special or unique system setup. You don't really need drive encryption or different system and home partitions. Hell, you don't even need to setup a swap partition (as I cover that later with a swap file) or even wayland. All you really need is a basic, run of the mill, simple setup. The less custom it is, out of the box, the easier a time you will have if something does happen to go wrong. The whole point is to play games on a handheld pc.*
 
@@ -43,8 +43,8 @@ Then I needed to uninstall a few things and install a few others. On a terminal 
 sudo xbps-install -Su
 ```
 
-This updates the current Void repository and checks for updates.
-Then I went about removing what I did not want.
+This updates the current Void repository and checks for updates.  
+Then I went about removing what I did not want.  
 
 ```
 sudo xbps-remove void-repo-multilib micro firefox
@@ -74,7 +74,7 @@ I removed the # symbol and entered my username after the = symbol, to look like 
 autologin-user=myusername
 ```
 
-Saved file and exit pluma.
+Saved file and exit pluma.  
 Lets start a few newly installed services if they were not started by default. In Void new services need to be started their first time by hand, and will start every time after on their own. In a terminal type
 
 ```
@@ -179,7 +179,7 @@ make
 sudo make dkms
 ```
 
-This downloads and builds the wonderful [ayn-platform kernel drivers](https://github.com/ShadowBlip/ayn-platform) by [ShadowBlip](https://github.com/ShadowBlip), and because they are DKMS drivers they will automatically be built each time you update to a new Linux Kernel.
+This downloads and builds the wonderful [ayn-platform kernel drivers](https://github.com/ShadowBlip/ayn-platform) by [ShadowBlip](https://github.com/ShadowBlip), and because they are DKMS drivers they will automatically be built each time you update to a new Linux Kernel.  
 I would now recommend downloading all the files in the Loki folder above, and putting them all in a scripts folder in your Home directory. Even the Loki.png Make sure all the .sh files are executable by doing the following in a terminal
 
 ```
