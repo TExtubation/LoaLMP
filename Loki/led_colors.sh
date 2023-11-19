@@ -1,4 +1,5 @@
 #!/bin/bash
+# by TExtubation
 # call this script from /etc/rc.local to change colors on system start
 
 #set Led Mode (1=Manule 0=Rainbow)
