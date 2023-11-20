@@ -31,7 +31,7 @@ Before you can install, whichever Linux flavor you have chosen, you must disable
 Follow your instructions for install according to whichever flavor you chose.  
 I am going to say something now that may make some people upset, so here goes.  
 
-*There really is no need to do any kind of special or unique system setup. You don't really need drive encryption or different system and home partitions. Hell, you don't even need to setup a swap partition (as I cover that later with a swap file) or even wayland. All you really need is a basic, run of the mill, simple setup. The less custom it is, out of the box, the easier a time you will have if something does happen to go wrong. The whole point is to play games on a handheld pc.*
+*There really is no need to do any kind of special or unique system setup. You don't really need drive encryption or different system and home partitions. Hell, you don't even need to setup a swap partition (as I cover that later with a swap file) or even wayland. All you really need is a basic, run of the mill, simple "standard" setup. The less custom it is, out of the box, the easier a time you will have if something does happen to go wrong. The whole point is to play games on a handheld pc.*
 
 From here on out I will go through the steps for what I did in Void Linux to get the functionality I wanted on my Loki. Some of the steps I take will not work as they are on other Linux distros. You may have to do some Googling to find the appropriate commands on your distro of choice if necessary. For those using Void there is a fantastic [Documentation site here](https://docs.voidlinux.org/) that can walk you through nearly every aspect of Void.
 
