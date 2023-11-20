@@ -370,6 +370,8 @@ sudo ln -S /etc/sv/NetworkManager /var/services/
 ```
 This will start the NetworkManager service and you should have wifi.  
 
+At this point nearly all Appimages just should work. Currently I'm running the following via Appimage; Brave, Thorium, Audacity, Minetest, Videomass, Vokoscreen, Deskreen, LeoCAD, Inviska_Rename, HandBrake, Tigervnc, Gimp, CommicbookTagger.  
+
 #### The End:
 
 Well here it is. You made it. I would love to hear your tips and tricks if you find any, and as I learn more I'll post it here. I hope this helps others.
