@@ -358,6 +358,8 @@ Antimicrox is able to use the Loki's built in controller to control the on-scree
 
 In *Menu -> System -> Preferences -> Hardware -> Keyboard Shortcuts* I have setup the bottom right button next to the screen so that when it is pressed it runs onboard and pulls up the on-screen keyboard.
 
+grub-customizer can be used to alter the time it takes for grub to auto start the default command from 5 to whatever you want.
+
 If you are wanting to do some experimenting on the Loki but do not want to go thru the hassle of plugging in the hub as well as a keyboard and mouse. Then install x11vnc
 
 ```
@@ -379,7 +381,7 @@ sudo ln -S /etc/sv/NetworkManager /var/services/
 ```
 This will start the NetworkManager service and you should have wifi.  
 
-At this point nearly all Appimages just should work. If they do not work, open them from a terminal and see if they complain about missing libraries. Currently I'm running the following via Appimage; Brave, Thorium, Audacity, Minetest, Videomass, Vokoscreen, Deskreen, LeoCAD, Inviska_Rename, HandBrake, Tigervnc, Gimp, CommicbookTagger.  Most of the time if an Appimage does not work and does not give you a clear reason as to why, it is either due to a bad build on the packager side, or something has been fundementally changed on your system to the point it will not even try to run.
+At this point nearly all Appimages just should work. If they do not work, open them from a terminal and see if they complain about missing libraries. Currently I'm running the following via Appimage across multiple Void installs; Brave, Thorium, Audacity, Minetest, Videomass, Vokoscreen, Deskreen, LeoCAD, Inviska_Rename, HandBrake, Tigervnc, Gimp, CommicbookTagger. Most of the time if an Appimage does not work and does not give you a clear reason as to why, it is either due to a bad build on the packager side, it is a very old Appimage, or something has been fundementally changed on your system to the point it will not even try to run.
 
 #### The End:
 
