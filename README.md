@@ -126,7 +126,7 @@ EndSection
 Save file, exit pluma, and give the system another reboot.
 Now the built-in controller will not affect the mouse until I setup antimicrox.
 
-SInce I did not have a swap partition I setup a swap file by typing the following into a terminal
+Since I did not have a swap partition I setup a swap file by typing the following into a terminal
 
 ```
 sudo fallocate -l 4G /swapfile
@@ -251,6 +251,14 @@ Delay: 1 seconds
 
 Also check to make sure that "Blueman Applet" and "Onboard" are also in the list and checked. Uncheck "Screensaver" and close the window.
 
+touch-rotate.sh fixes the rotation of the touch screen interface. If not run the touch interface is rotated clockwise to the screen displayed (i.e. touching upperleft would activate lower left of screen)  
+
+AntimicroX is an application that can bind keyboard and mouse commands to game controllers. Specifically the built in controller of the Loki.   
+
+Loki Control / yad-loki.sh is the base for a set of yad scripts I wrote to give some control over the Loki's leds, as well as various tweaks.  
+
+Unclutter-xfixes is a tool that can hide the mouse pointer when using the screen as a touch interface. It is not necessary, but it adds to the professionalism.  
+
 Now we come to scary territory as we need to edit the sudoers file. The best way to do this is by using visudo in a terminal like so
 
 ```
@@ -291,7 +299,8 @@ As for the other functions of the Loki System Control Icon. Simply "Left Clickin
 /home/myusername/scripts/yad-loki.sh &
 ```
 
-or to create a menu item to start the file
+which starts the script into the background with "&"  
+or to create a menu item to start the file  
 
 ```
 /home/myusername/scripts/yad-loki.sh
@@ -299,7 +308,7 @@ or to create a menu item to start the file
 
 I did not create any way to control the Loki's fan, as I never really noticed it much, and when I did, I tweaked the games a bit so it wasn't really audible. The options are still there though from the ayn-platform drivers, but YMMV.  
 
-I also did not feel the need to be able to adjust the TDP of the system, as the system seems to do just fine on its own controlling it. It can be controlled via Ryzenadj, but that is an entirely different beast.  
+I also did not feel the need to be able to adjust the TDP of the system, as the system seems to do just fine on its own controlling it. It can be controlled via Ryzenadj, but that is an entirely different beast. I may end up making something for it in the future.  
 
 #### The Games:
 
@@ -370,7 +379,7 @@ sudo ln -S /etc/sv/NetworkManager /var/services/
 ```
 This will start the NetworkManager service and you should have wifi.  
 
-At this point nearly all Appimages just should work. Currently I'm running the following via Appimage; Brave, Thorium, Audacity, Minetest, Videomass, Vokoscreen, Deskreen, LeoCAD, Inviska_Rename, HandBrake, Tigervnc, Gimp, CommicbookTagger.  
+At this point nearly all Appimages just should work. If they do not work, open them from a terminal and see if they complain about missing libraries. Currently I'm running the following via Appimage; Brave, Thorium, Audacity, Minetest, Videomass, Vokoscreen, Deskreen, LeoCAD, Inviska_Rename, HandBrake, Tigervnc, Gimp, CommicbookTagger.  Most of the time if an Appimage does not work and does not give you a clear reason as to why, it is either due to a bad build on the packager side, or something has been fundementally changed on your system to the point it will not even try to run.
 
 #### The End:
 
