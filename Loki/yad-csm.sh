@@ -175,7 +175,11 @@ fi
 # use dpms true or false
 if [ $dpms == "TRUE" ]; then
   dpms1="xset -dpms"
-  dpms2="xset +dpms && "'\'
+  if [ $dssaver == "TRUE" ] || [ $anti == "TRUE" ]; then
+    dpms2="xset +dpms && "'\'
+  else
+    dpms2="xset +dpms"
+  fi
 else
   dpms1=""
   dpms2=""
@@ -184,7 +188,11 @@ fi
 # use mate screensaver inhibit commands true or false
 if [ $dssaver == "TRUE" ]; then
   dssaver1="mate-screensaver-command -i &"
-  dssaver2="killall mate-screensaver-command && "'\'
+  if [ $anti == "TRUE" ]; then
+    dssaver2="killall mate-screensaver-command && "'\'
+  else
+    dssaver2="killall mate-screensaver-command"
+  fi
 else
   dssaver1=""
   dssaver2=""
@@ -202,7 +210,11 @@ fi
 # custom commands to before and after while in game true or false
 if [ $cssc == "TRUE" ]; then
   before1="$before"
-  after1="$after && "'\'
+  if [ $dpms == "TRUE" ] || [ $dssaver == "TRUE" ] || [ $anti == "TRUE" ]; then
+    after1="$after && "'\'
+  else
+    after1="$after"
+  fi
 else
   before1=""
   after1=""
@@ -230,9 +242,11 @@ else
   echo "Desktop File Not Created"
 fi
 
+# convert game name to desktop friendly formatting
+gnameD=`sed -E 's/[^[:alnum:]]+/_/g' <<< "$gname"`
 # check if "create desktop file" is true or not and output
 if [ $cdf == "TRUE" ]; then
-cat > ~/.local/share/applications/$gname.desktop <<EOF
+cat > ~/.local/share/applications/$gnameD.desktop <<EOF
 [Desktop Entry]
 Name=$gname
 Exec="$save"
@@ -249,9 +263,9 @@ fi
 
 # confirmation screens
 if [ $cdf == "TRUE" ] && [ $csf == "TRUE" ]; then
-  yad --title="Confirm" --text="\nLaunch Script Created as $save\n\nDesktop File Created in ~/.local/share/applications/$gname.desktop\n"
+  yad --title="Confirm" --text="\nLaunch Script Created as $save\n\nDesktop File Created in ~/.local/share/applications/$gnameD.desktop\n"
 elif [ $cdf == "TRUE" ] && [ $csf == "FALSE" ]; then
-  yad --title="Confirm" --text="\nLaunch Script Not Created\n\nDesktop File Created in ~/.local/share/applications/$gname.desktop\n"
+  yad --title="Confirm" --text="\nLaunch Script Not Created\n\nDesktop File Created in ~/.local/share/applications/$gnameD.desktop\n"
 elif [ $cdf == "FALSE" ] && [ $csf == "TRUE" ]; then
   yad --title="Confirm" --text="\nLaunch Script Created as $save\n\nDesktop File Not Created\n"
 else
