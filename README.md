@@ -289,6 +289,8 @@ As for the other functions of the Loki System Control Icon. Simply "Left Clickin
 
 **Custom Conty Script Maker:** This option opens a yad-dialog window that will allow you to create custom game launch scripts that utilize Conty to run things like Gamescope, Bottles, MangoHUD, and the games themselves. It even lets you create .desktop files for your games that should show up under your desktop menu's Game section automatically. The dialog is filled with tooltips on every option so I will not cover them here. I will talk more about Conty below.
 
+Update 2024-02-11: *There is currently an issue with the Conty 1.25.0 version of bottles-cli (used by the script maker) that produces an error with some games (not all) causing them not to start from script or terminal. This is a bottles v51.10 error and not a Conty or script error. A bottles fix (from their bug tracker) is coming I just do not know when. Conty 1.24.8 does not have this issue.*
+
 **Fix Touch Rotation:** If for whatever reason the screens touch capabilities goes haywire, and is not putting the cursor where it should be (which can and probably will happen at some point) this option runs the touch-rotate.sh file to fix the proper touch screen orientation.
 
 **Bluetooth Fix:** Already covered above
